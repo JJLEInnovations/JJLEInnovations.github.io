@@ -39,68 +39,83 @@
   <p>Mail Assistant answers those questions, then lets you act on the answer &mdash; across every account at once, with a confirmation first and a way back afterwards. <strong>Visibility, and the tools to do something with it.</strong></p>
 </div>
 
-<h2>What it does</h2>
+<h2>Features of Mail Assistant</h2>
+<p>Four tabs. Three of them find things; the fourth shows you exactly what the app is holding.</p>
+<p class="hint">Click any screenshot to enlarge it &mdash; click outside, or press Escape, to close. Where a tab has more than one, the row scrolls sideways.</p>
 
-<div class="card">
-  <h3>See who is actually filling your inbox</h3>
-  <p>The Senders Report ranks every sender by how many messages they have sent you and how much space those take &mdash; and sorting by size is usually the surprise. A handful of senders account for most of a mailbox. Each one opens out to show which folders their mail is sitting in.</p>
-  <figure>
-    <img src="/mail-assistant/shots/MailAssistantSendersReportView.webp"
-         alt="The Senders Report, listing senders with message counts, unread counts and the space each takes."
-         width="1057" height="721" loading="lazy" decoding="async">
-    <figcaption>Every sender, ranked. Filters for unread, age, folder and account sit above the list.</figcaption>
-  </figure>
-</div>
-
-<div class="card">
-  <h3>Catch it before it piles up</h3>
-  <p>Trends watches the shape of your mail rather than its contents: how much arrived each week and when the busiest week was, new senders you have never once opened, addresses you have not heard from in over a year, and what is stacking up unread now. Those lists can be narrowed to addresses you have never written to, so the people you actually correspond with stay out of the way.</p>
-  <p>Trends changes nothing by itself. It tells you where to look.</p>
-  <figure>
-    <img src="/mail-assistant/shots/MailAssistantTrends1.webp"
-         alt="The Trends tab: a bar chart of weekly arrivals above a list of new senders never opened."
-         width="1448" height="1086" loading="lazy" decoding="async">
-    <figcaption>Twelve weeks of arrivals against the average, then the senders worth a decision.</figcaption>
-  </figure>
-  <figure>
-    <img src="/mail-assistant/shots/MailAssistantTrends2.webp"
-         alt="Trends lists with filter and sort controls, and buttons to show more senders."
-         width="1448" height="1086" loading="lazy" decoding="async">
-    <figcaption>Each list can be filtered, re-sorted and opened up &mdash; and the sentence above the rows always says which rule and which order you are looking at.</figcaption>
-  </figure>
-</div>
-
-<div class="card">
+<div class="card feature">
+  <span class="tab-name">Tab 1 &middot; Advanced Mail Search</span>
   <h3>Search once, then act on what you find</h3>
-  <p>By sender, subject, date, folder, attachment name, or words inside the message body &mdash; all of it from an index kept on your Mac. The results are not a dead end: each row is tagged with the account it came from, and you can select any of them and act on the whole selection at once. Searches you run often can be saved, and any result list can be exported as a spreadsheet.</p>
-  <figure>
-    <img src="/mail-assistant/shots/MailAssistantAdvanceSearch1.webp"
-         alt="Advanced Mail Search with fields for sender, subject and body, and a list of matching messages."
-         width="1448" height="1086" loading="lazy" decoding="async">
-    <figcaption>Sender, subject, body, date, folder, attachments and read state &mdash; in one pass, over every account.</figcaption>
-  </figure>
-  <figure>
-    <img src="/mail-assistant/shots/MailAssistantAdvanceSearch2.webp"
-         alt="Typing a partial sender name shows matching senders with how many messages each has sent."
-         width="1448" height="1086" loading="lazy" decoding="async">
-    <figcaption>Start typing a sender and it offers the matching addresses, with the message count for each.</figcaption>
-  </figure>
-  <figure>
-    <img src="/mail-assistant/shots/MailAssistantAdvanceSearch3.webp"
-         alt="A body-text search showing the matching phrase highlighted inside each result."
-         width="1448" height="1086" loading="lazy" decoding="async">
-    <figcaption>Body search shows the matching words in context, and says plainly that Apple Mail was not contacted to find them.</figcaption>
-  </figure>
+  <p>Search by sender, subject, date, folder, attachment name, or words inside the message body &mdash; every account at once, from an index kept on your Mac. Start typing a sender and it offers matching addresses with the message count for each.</p>
+  <p>The results are not a dead end. Each row is tagged with the account it came from, and you can select any of them and move, trash or mark the whole selection in one pass. Searches you run often can be saved, and any result list exported as a spreadsheet.</p>
+  <div class="strip">
+    <button class="shot" type="button" data-src="/mail-assistant/shots/MailAssistantAdvanceSearch1.webp" data-caption="Sender, subject, body, date, folder, attachments and read state, over every account at once.">
+      <img src="/mail-assistant/shots/MailAssistantAdvanceSearch1.webp" alt="Advanced Mail Search with fields for sender, subject and body, above a list of matching messages." width="1448" height="1086" loading="lazy" decoding="async">
+      <span class="cap">Every field in one pass, over every account.</span>
+    </button>
+    <button class="shot" type="button" data-src="/mail-assistant/shots/MailAssistantAdvanceSearch2.webp" data-caption="Typing part of a sender name offers the matching addresses, each with how many messages it has sent you.">
+      <img src="/mail-assistant/shots/MailAssistantAdvanceSearch2.webp" alt="Typing a partial sender name shows matching senders with message counts." width="1448" height="1086" loading="lazy" decoding="async">
+      <span class="cap">Sender suggestions, with counts.</span>
+    </button>
+    <button class="shot" type="button" data-src="/mail-assistant/shots/MailAssistantAdvanceSearch3.webp" data-caption="Body search shows the matching words in context, and states plainly that Apple Mail was not contacted to find them.">
+      <img src="/mail-assistant/shots/MailAssistantAdvanceSearch3.webp" alt="A body-text search showing the matching phrase highlighted inside each result." width="1448" height="1086" loading="lazy" decoding="async">
+      <span class="cap">Body text, matched in context.</span>
+    </button>
+  </div>
 </div>
 
+<div class="card feature">
+  <span class="tab-name">Tab 2 &middot; Senders Report</span>
+  <h3>See who is actually filling your inbox</h3>
+  <p>Every sender ranked by how many messages they have sent you and how much space those take &mdash; and sorting by size is usually the surprise. A handful of senders account for most of a mailbox. Each row opens out to show which folders their mail is sitting in.</p>
+  <p>From here you can move a sender&rsquo;s mail to a folder or to Trash, mark it read or unread, look for their unsubscribe details, or mark them as one to keep so they are never staged for deletion again.</p>
+  <div class="strip single">
+    <button class="shot" type="button" data-src="/mail-assistant/shots/MailAssistantSendersReportView.webp" data-caption="Every sender, ranked. Filters for unread, age, folder and account sit above the list, and each sender expands to show the folders their mail is in.">
+      <img src="/mail-assistant/shots/MailAssistantSendersReportView.webp" alt="The Senders Report listing senders with message counts, unread counts and space used." width="1057" height="721" loading="lazy" decoding="async">
+      <span class="cap">Ranked senders, with the filters that narrow them above.</span>
+    </button>
+  </div>
+</div>
+
+<div class="card feature">
+  <span class="tab-name">Tab 3 &middot; Trends</span>
+  <h3>Catch it before it piles up</h3>
+  <p>Trends watches the shape of your mail rather than its contents: how much arrived each week and when the busiest week was, new senders you have never once opened, addresses you have not heard from in over a year, and what is stacking up unread now.</p>
+  <p>Each list can be filtered, re-sorted and opened up, and the sentence above the rows always states which rule put them there and which order you are looking at. Lists can be narrowed to addresses you have never written to, so the people you actually correspond with stay out of the way. Trends changes nothing by itself &mdash; it tells you where to look.</p>
+  <div class="strip">
+    <button class="shot" type="button" data-src="/mail-assistant/shots/MailAssistantTrends1.webp" data-caption="Twelve weeks of arrivals against the average week, above the senders worth a decision.">
+      <img src="/mail-assistant/shots/MailAssistantTrends1.webp" alt="The Trends tab: a bar chart of weekly arrivals above a list of new senders never opened." width="1448" height="1086" loading="lazy" decoding="async">
+      <span class="cap">Weekly arrivals, then who is behind them.</span>
+    </button>
+    <button class="shot" type="button" data-src="/mail-assistant/shots/MailAssistantTrends2.webp" data-caption="Every list has its own filter, sort and paging, and says how many senders it is holding back.">
+      <img src="/mail-assistant/shots/MailAssistantTrends2.webp" alt="Trends lists with filter and sort controls and buttons to show more senders." width="1448" height="1086" loading="lazy" decoding="async">
+      <span class="cap">Filter, sort and expand each list.</span>
+    </button>
+  </div>
+</div>
+
+<div class="card feature">
+  <span class="tab-name">Tab 4 &middot; Settings</span>
+  <h3>You can see exactly what it is holding</h3>
+  <p>Settings shows the folder access you granted and lets you withdraw it, how large the search index is and how much of your mail is in it, and every mark you have put on a sender. It also lists, in plain words, everything the app keeps on your Mac and how to remove all of it.</p>
+  <div class="strip single">
+    <button class="shot" type="button" data-src="/mail-assistant/shots/MailAssistantSettingsScreen.webp" data-caption="Permission, index size and indexing progress, all stated rather than assumed - including a button to revoke the folder access.">
+      <img src="/mail-assistant/shots/MailAssistantSettingsScreen.webp" alt="The Settings tab showing Apple Mail access with a Revoke Access button, and the search index size." width="1093" height="892" loading="lazy" decoding="async">
+      <span class="cap">Nothing about how it works is hidden.</span>
+    </button>
+  </div>
+</div>
+
+<h2>Acting on what you find</h2>
+
 <div class="card">
-  <h3>Act on hundreds of messages in one pass</h3>
+  <h3>Hundreds of messages in one pass</h3>
   <p>Move to a folder, move to Trash, or mark read or unread &mdash; for several senders at once, across different accounts, in a single run. Every action shows a confirmation naming exactly how many messages it will affect, reports back how many were actually changed, and can be stopped part way without losing the work already done.</p>
 </div>
 
 <div class="card">
   <h3>Stop the next one from arriving</h3>
-  <p>Deleting today&rsquo;s newsletter does nothing about next week&rsquo;s. Mail Assistant reads the unsubscribe details the sender already put in their own message headers and hands the link to your browser. It also tells you whether unsubscribing is the right move: for a sender you have written to before it usually is, and for one you have never heard from it usually is not.</p>
+  <p>Deleting today&rsquo;s newsletter does nothing about next week&rsquo;s. Mail Assistant reads the unsubscribe details the sender put in their own message headers and hands the link to your browser. It also tells you whether unsubscribing is the right move: for a sender you have written to before it usually is, and for one you have never heard from it usually is not.</p>
 </div>
 
 <div class="card">
@@ -108,19 +123,8 @@
   <p>Restore returns messages from Trash to the folders they came from. Mark as Read is undone by Mark as Unread. Recent actions keeps a record of everything you did, so nothing you try here is a one-way door.</p>
 </div>
 
-<div class="card">
-  <h3>You can see exactly what it is doing</h3>
-  <p>Settings shows the folder access you granted and lets you withdraw it, how large the search index is and what it holds, and every mark you have put on a sender. Nothing about how the app works is hidden behind a preference you cannot inspect.</p>
-  <figure>
-    <img src="/mail-assistant/shots/MailAssistantSettingsScreen.webp"
-         alt="The Settings tab showing Apple Mail access with a Revoke Access button, and the search index size."
-         width="1093" height="892" loading="lazy" decoding="async">
-    <figcaption>Permission, index size and indexing progress, all stated rather than assumed.</figcaption>
-  </figure>
-</div>
-
 <h2>Requirements</h2>
-<p>macOS 14 or later, and Apple Mail signed in to at least one account. Mail Assistant works alongside Apple Mail rather than replacing it &mdash; your mail stays exactly where it is, in Apple Mail, and anything this app changes is a change Apple Mail itself carries out.</p>
+<p>macOS 14 or later, and Apple Mail signed in to at least one account. Mail Assistant works alongside Apple Mail rather than replacing it &mdash; your mail stays exactly where it is, and anything this app changes is a change Apple Mail itself carries out.</p>
 
 <h2>Questions</h2>
 <p>Read the <a href="/mail-assistant/support.html">support page</a> or write to <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a>.</p>
@@ -131,5 +135,40 @@
 </footer>
 
 </div>
+
+<dialog class="zoom" id="zoom" aria-label="Enlarged screenshot">
+  <button class="close" type="button" value="close">Close</button>
+  <figure>
+    <img id="zoom-img" alt="">
+    <figcaption id="zoom-cap"></figcaption>
+  </figure>
+</dialog>
+
+<script>
+(function () {
+  var dlg = document.getElementById('zoom');
+  var img = document.getElementById('zoom-img');
+  var cap = document.getElementById('zoom-cap');
+  if (!dlg || typeof dlg.showModal !== 'function') return;  // no dialog: shots stay inline
+
+  document.querySelectorAll('.shot').forEach(function (shot) {
+    shot.addEventListener('click', function () {
+      img.src = shot.dataset.src;
+      img.alt = shot.querySelector('img').alt;
+      cap.textContent = shot.dataset.caption || '';
+      dlg.showModal();
+    });
+  });
+
+  // Clicking outside the picture closes it. The backdrop is not an element,
+  // so the click lands on the dialog itself; anything inside stops here.
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg || e.target.classList.contains('close')) dlg.close();
+  });
+  // Free the memory and stop a stale picture flashing on the next open.
+  dlg.addEventListener('close', function () { img.removeAttribute('src'); });
+})();
+</script>
+
 </body>
 </html>
