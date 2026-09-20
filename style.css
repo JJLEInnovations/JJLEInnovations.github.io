@@ -47,7 +47,7 @@ body.marked::before {
   content: "";
   position: fixed; top: 110px; right: 30px;
   width: clamp(180px, calc(50vw - 460px), 300px); aspect-ratio: 1;
-  background: url("/icon-wash.webp") no-repeat center / contain;
+  background: url("/icon-mark.webp") no-repeat center / contain;
   opacity: .10; pointer-events: none; z-index: 0;
 }
 /* Below this there is no gutter left to put it in. */
