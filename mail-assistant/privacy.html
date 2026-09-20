@@ -26,24 +26,25 @@
 <h2>What the app reads</h2>
 <p>Mail Assistant works with the mail Apple Mail has already downloaded to your Mac. It reads two things from your <code>~/Library/Mail</code> folder:</p>
 <ul>
-  <li><strong>Apple Mail's index</strong> — the database Mail keeps of senders, subjects, dates, folders, sizes, and whether a message is read.</li>
-  <li><strong>Message files</strong> — the individual <code>.emlx</code> files on your disk, read only when you search for words inside messages or ask for an unsubscribe link.</li>
+  <li><strong>Apple Mail&rsquo;s index</strong> &mdash; the database Mail already keeps, listing senders, subjects, dates, folders, sizes, and whether each message has been read.</li>
+  <li><strong>Message files</strong> &mdash; the individual <code>.emlx</code> files on your disk. These are read when you build the search index, which opens every message once; when you search for words inside messages; and when you ask what unsubscribe options a sender offers.</li>
 </ul>
-<p>You grant this access yourself, once, in a standard macOS file panel the first time you use the app. macOS remembers your choice so you are not asked again, and you can revoke it at any time in System Settings.</p>
+<p>You grant this access yourself, once, in a standard macOS file panel the first time you use the app. macOS remembers your choice, so you are not asked again. That choice is recorded inside the app&rsquo;s own folder rather than in System Settings, so the way to withdraw it is to delete that folder, described below.</p>
 
 <h2>What the app stores, and where</h2>
 <p>Everything the app creates stays in its own folder on your Mac:</p>
 <ul>
   <li>A <strong>search index</strong>, so searching is fast and does not have to re-read your mail each time.</li>
-  <li>A <strong>record of actions you confirmed</strong> — which messages were moved where — so the app can show you a history and put messages back.</li>
-  <li>Your <strong>settings</strong>.</li>
+  <li>A <strong>record of actions you confirmed</strong> &mdash; which messages were moved where &mdash; so the app can show you a history and put messages back.</li>
+  <li>Your <strong>settings</strong>, including the folder-access choice above.</li>
 </ul>
-<p>All of it lives in <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. Moving that folder to the Trash removes every trace of it. Nothing is stored anywhere else, on this Mac or off it.</p>
+<p>All of it lives in <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. Moving that folder to the Trash deletes the index, the history, and your settings, and withdraws the folder access you granted.</p>
+<p>Two things are not inside it, so that deleting the folder is not mistaken for removing every trace. macOS keeps its own <strong>Automation permission entry</strong> for the app in System Settings &rsaquo; Privacy &amp; Security &rsaquo; Automation, which survives deleting the app; you can remove it there. And any <strong>spreadsheet you exported</strong> stays wherever you chose to save it.</p>
 
 <h2>What the app sends: nothing</h2>
-<p>This is not a policy commitment we are asking you to take on trust. Mail Assistant is a sandboxed app that does not request network permission from macOS. It <em>cannot</em> open an internet connection — the operating system refuses. Specifically:</p>
+<p>This is not a promise you are asked to take on trust. Mail Assistant is a sandboxed app that does not request network permission from macOS. It <em>cannot</em> open an internet connection &mdash; the operating system refuses. Specifically:</p>
 <ul>
-  <li>No data of any kind is transmitted off your Mac.</li>
+  <li>The app transmits no data of any kind off your Mac.</li>
   <li>No analytics, usage tracking, crash reporting, or advertising.</li>
   <li>No third-party software libraries are included in the app.</li>
   <li>No account, no sign-in, no server.</li>
@@ -52,14 +53,22 @@
 <h2>Changing your mail</h2>
 <p>When you confirm an action, the app asks Apple Mail to carry it out: move messages to a folder or to Trash, put them back, or mark them read or unread. This uses macOS Automation, which you approve separately the first time. Nothing is ever changed without a confirmation that names how many messages are affected.</p>
 
-<h2>Links you open</h2>
-<p>When you use an unsubscribe link, the app hands the address to your default web browser and stops there. From that point you are on the sender's website, and their privacy policy applies. The app does not open the page itself, does not follow it, and never sees the response.</p>
+<h2>Unsubscribing, and links you open</h2>
+<p>Mail Assistant never unsubscribes you. It reads the unsubscribe details a sender put in their own message and offers you the route they published:</p>
+<ul>
+  <li>A <strong>web address</strong> is handed to your default browser, and the app stops there. From that point you are on the sender&rsquo;s website and their privacy policy applies. The app does not open the page itself, does not follow it, and never sees the response.</li>
+  <li>An <strong>email address</strong> opens a pre-addressed message in Apple Mail. Nothing is sent until you send it, and it is Apple Mail that sends it, not this app.</li>
+</ul>
+<p>Either route tells the sender your address is live, because the link they publish identifies you. The app says so before you choose, and tells you when a sender is one you have never written to.</p>
+
+<h2>Requests about your data</h2>
+<p>Because nothing is collected, there is nothing held about you to give you a copy of, correct, or delete, and nothing that could be sold, shared, or disclosed to anyone. Everything the app produced is in the folder named above, under your control, on your own Mac.</p>
 
 <h2>Children</h2>
 <p>Mail Assistant collects no personal information from anyone, including children under 13.</p>
 
 <h2>Changes to this policy</h2>
-<p>If this policy changes, the date at the top changes with it. If the app ever gains the ability to send data anywhere — which would be a significant change to how it works — that will be stated plainly here and in the app's release notes before it happens.</p>
+<p>If this policy changes, the date at the top changes with it. If the app ever gains the ability to send data anywhere &mdash; which would be a significant change to how it works &mdash; that will be stated plainly here and in the app&rsquo;s release notes before it happens.</p>
 
 <h2>Contact</h2>
 <p>Questions about this policy, or about the app: <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a>.</p>
