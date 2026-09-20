@@ -4,51 +4,103 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mail Assistant for Mac</title>
-<meta name="description" content="Manage every Apple Mail account like never before. See who is filling your mailbox, search every account at once, and file or mark hundreds of messages in one pass. Everything stays on your Mac.">
+<meta name="description" content="An assistant for Apple Mail. See who is filling your mailbox, search every account at once, and act on hundreds of messages in one pass. Everything stays on your Mac.">
+<meta property="og:title" content="Mail Assistant for Mac">
+<meta property="og:description" content="An assistant for Apple Mail. See who is filling your mailbox, search every account at once, and act on hundreds of messages in one pass.">
+<meta property="og:image" content="https://jjleinnovations.github.io/icon-512.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.png" type="image/png">
 <link rel="stylesheet" href="/style.css">
 </head>
-<body>
+<body class="marked">
 <div class="wrap">
 
 <nav>
-  <span class="brand">JJLE Innovations</span>
-  <a href="/mail-assistant/" aria-current="page">Mail Assistant</a>
+  <span class="brand"><img src="/icon.png" alt="">JJLE Innovations</span>
+  <a href="/mail-assistant/">Mail Assistant</a>
   <a href="/mail-assistant/privacy.html">Privacy</a>
   <a href="/mail-assistant/support.html">Support</a>
 </nav>
 
-<h1>Mail Assistant</h1>
-<p class="lead">Manage every Apple Mail account like never before — without your mail ever leaving your Mac.</p>
+<div class="masthead">
+  <img src="/icon.png" alt="Mail Assistant icon">
+  <h1>Mail Assistant</h1>
+</div>
+<p class="lead">An assistant for Apple Mail &mdash; it works alongside Mail, on the mail already on your Mac, and shows you what Mail cannot.</p>
 
 <div class="summary">
   <p><strong>Everything stays on this Mac.</strong> Mail Assistant has no network permission, no account, and no analytics. It reads the mail Apple Mail already downloaded and never sends any of it anywhere.</p>
+</div>
+
+<div class="stand-out">
+  <span class="kicker">What makes it stand out</span>
+  <p>Apple Mail handles your mail well. What it does not do is show you the shape of it. It can tell you how big an account or a mailbox is, but not <strong>which senders</strong> are behind that size, how many messages each has sent, how much space they take, or which of them you have never once opened.</p>
+  <p>Mail Assistant answers those questions, then lets you act on the answer &mdash; across every account at once, with a confirmation first and a way back afterwards. <strong>Visibility, and the tools to do something with it.</strong></p>
 </div>
 
 <h2>What it does</h2>
 
 <div class="card">
   <h3>See who is actually filling your inbox</h3>
-  <p>Apple Mail can tell you how big an account or a mailbox is. It cannot tell you who is behind it. The Senders Report ranks every sender by how many messages they have sent you and how much space those take — and sorting by size is usually the surprise. A handful of senders account for most of a mailbox.</p>
+  <p>The Senders Report ranks every sender by how many messages they have sent you and how much space those take &mdash; and sorting by size is usually the surprise. A handful of senders account for most of a mailbox. Each one opens out to show which folders their mail is sitting in.</p>
+  <figure>
+    <img src="/mail-assistant/shots/MailAssistantSendersReportView.webp"
+         alt="The Senders Report, listing senders with message counts, unread counts and the space each takes."
+         width="1057" height="721" loading="lazy" decoding="async">
+    <figcaption>Every sender, ranked. Filters for unread, age, folder and account sit above the list.</figcaption>
+  </figure>
 </div>
 
 <div class="card">
   <h3>Catch it before it piles up</h3>
-  <p>Trends watches the shape of your mail rather than its contents: how much arrived each week and when the busiest week was, new senders you have never once opened, addresses you have not heard from in over a year, and what is stacking up unread right now. Those lists can be narrowed to addresses you have never written to, so the people you actually correspond with stay out of the way. Trends changes nothing by itself — it just tells you where to look.</p>
+  <p>Trends watches the shape of your mail rather than its contents: how much arrived each week and when the busiest week was, new senders you have never once opened, addresses you have not heard from in over a year, and what is stacking up unread now. Those lists can be narrowed to addresses you have never written to, so the people you actually correspond with stay out of the way.</p>
+  <p>Trends changes nothing by itself. It tells you where to look.</p>
+  <figure>
+    <img src="/mail-assistant/shots/MailAssistantTrends1.webp"
+         alt="The Trends tab: a bar chart of weekly arrivals above a list of new senders never opened."
+         width="1448" height="1086" loading="lazy" decoding="async">
+    <figcaption>Twelve weeks of arrivals against the average, then the senders worth a decision.</figcaption>
+  </figure>
+  <figure>
+    <img src="/mail-assistant/shots/MailAssistantTrends2.webp"
+         alt="Trends lists with filter and sort controls, and buttons to show more senders."
+         width="1448" height="1086" loading="lazy" decoding="async">
+    <figcaption>Each list can be filtered, re-sorted and opened up &mdash; and the sentence above the rows always says which rule and which order you are looking at.</figcaption>
+  </figure>
 </div>
 
 <div class="card">
   <h3>Search once, then act on what you find</h3>
-  <p>By sender, subject, date, folder, attachment name, or words inside the message body, across every account together, from an index kept on your Mac. The results are not a dead end: each row is tagged with the account it came from, and you can select any of them and act on the whole selection at once. Searches you run often can be saved, and any result list can be exported as a spreadsheet.</p>
+  <p>By sender, subject, date, folder, attachment name, or words inside the message body &mdash; all of it from an index kept on your Mac. The results are not a dead end: each row is tagged with the account it came from, and you can select any of them and act on the whole selection at once. Searches you run often can be saved, and any result list can be exported as a spreadsheet.</p>
+  <figure>
+    <img src="/mail-assistant/shots/MailAssistantAdvanceSearch1.webp"
+         alt="Advanced Mail Search with fields for sender, subject and body, and a list of matching messages."
+         width="1448" height="1086" loading="lazy" decoding="async">
+    <figcaption>Sender, subject, body, date, folder, attachments and read state &mdash; in one pass, over every account.</figcaption>
+  </figure>
+  <figure>
+    <img src="/mail-assistant/shots/MailAssistantAdvanceSearch2.webp"
+         alt="Typing a partial sender name shows matching senders with how many messages each has sent."
+         width="1448" height="1086" loading="lazy" decoding="async">
+    <figcaption>Start typing a sender and it offers the matching addresses, with the message count for each.</figcaption>
+  </figure>
+  <figure>
+    <img src="/mail-assistant/shots/MailAssistantAdvanceSearch3.webp"
+         alt="A body-text search showing the matching phrase highlighted inside each result."
+         width="1448" height="1086" loading="lazy" decoding="async">
+    <figcaption>Body search shows the matching words in context, and says plainly that Apple Mail was not contacted to find them.</figcaption>
+  </figure>
 </div>
 
 <div class="card">
   <h3>Act on hundreds of messages in one pass</h3>
-  <p>Move to a folder, move to Trash, or mark read or unread — for several senders at once, across different accounts, in a single run. Every action shows a confirmation naming exactly how many messages it will affect, reports back how many were actually changed, and can be stopped part way without losing the work already done.</p>
+  <p>Move to a folder, move to Trash, or mark read or unread &mdash; for several senders at once, across different accounts, in a single run. Every action shows a confirmation naming exactly how many messages it will affect, reports back how many were actually changed, and can be stopped part way without losing the work already done.</p>
 </div>
 
 <div class="card">
   <h3>Stop the next one from arriving</h3>
-  <p>Deleting today’s newsletter does nothing about next week’s. Mail Assistant reads the unsubscribe details the sender already put in their own messages and hands the link to your browser, so you can leave the list instead of clearing it again next month.</p>
+  <p>Deleting today&rsquo;s newsletter does nothing about next week&rsquo;s. Mail Assistant reads the unsubscribe details the sender already put in their own message headers and hands the link to your browser. It also tells you whether unsubscribing is the right move: for a sender you have written to before it usually is, and for one you have never heard from it usually is not.</p>
 </div>
 
 <div class="card">
@@ -56,15 +108,26 @@
   <p>Restore returns messages from Trash to the folders they came from. Mark as Read is undone by Mark as Unread. Recent actions keeps a record of everything you did, so nothing you try here is a one-way door.</p>
 </div>
 
+<div class="card">
+  <h3>You can see exactly what it is doing</h3>
+  <p>Settings shows the folder access you granted and lets you withdraw it, how large the search index is and what it holds, and every mark you have put on a sender. Nothing about how the app works is hidden behind a preference you cannot inspect.</p>
+  <figure>
+    <img src="/mail-assistant/shots/MailAssistantSettingsScreen.webp"
+         alt="The Settings tab showing Apple Mail access with a Revoke Access button, and the search index size."
+         width="1093" height="892" loading="lazy" decoding="async">
+    <figcaption>Permission, index size and indexing progress, all stated rather than assumed.</figcaption>
+  </figure>
+</div>
+
 <h2>Requirements</h2>
-<p>macOS 14 or later, and Apple Mail signed in to at least one account. Mail Assistant works alongside Apple Mail rather than replacing it — your mail stays exactly where it is.</p>
+<p>macOS 14 or later, and Apple Mail signed in to at least one account. Mail Assistant works alongside Apple Mail rather than replacing it &mdash; your mail stays exactly where it is, in Apple Mail, and anything this app changes is a change Apple Mail itself carries out.</p>
 
 <h2>Questions</h2>
 <p>Read the <a href="/mail-assistant/support.html">support page</a> or write to <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a>.</p>
 
 <footer>
   <p>Mail Assistant is developed by JJLE Innovations.</p>
-  <p>Apple, Apple Mail, macOS and Mac are trademarks of Apple Inc.</p>
+  <p>Apple, Apple Mail, macOS and Mac are trademarks of Apple Inc. Mail Assistant is not affiliated with or endorsed by Apple Inc.</p>
 </footer>
 
 </div>

@@ -1,0 +1,3 @@
+# Screenshot originals. The site serves the WebP copies in mail-assistant/shots/,
+# which are a tenth the size; these stay local so they can be re-exported.
+mail-assistant/MailAssistant*.png
