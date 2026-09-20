@@ -34,7 +34,8 @@
 
 <div class="card">
   <h3>Everything is empty.</h3>
-  <p>The app reads an existing Apple Mail setup. If Mail is not signed in to an account, or has not finished downloading messages, there is nothing for the app to show. Open Mail, make sure your mail is there, then use <strong>Refresh Report</strong>.</p>
+  <p>Check <strong>Settings &rsaquo; Apple Mail access</strong> first. If it says <em>Not granted</em>, the app cannot read anything until you choose Apple Mail&rsquo;s folder &mdash; that is the usual cause, and it is also what happens if you used <strong>Revoke Access</strong>.</p>
+  <p>If access is granted, the app is reading an Apple Mail setup that has nothing in it yet. If Mail is not signed in to an account, or has not finished downloading messages, there is nothing to show. Open Mail, make sure your mail is there, then use <strong>Refresh Report</strong>.</p>
 </div>
 
 <h2>Using it</h2>
@@ -42,7 +43,7 @@
 <div class="card">
   <h3>I moved Gmail messages and they are still in the Inbox.</h3>
   <p>This is Gmail, not a bug, and the app warns you before it happens.</p>
-  <p>Gmail does not have folders. It has labels, and a message can carry several at once. When an app asks Apple Mail to file a Gmail message, Gmail adds the new label but keeps the old one, so the message appears in both places. There is no command Apple Mail can send that removes a Gmail label — this is a limit of what Gmail exposes, and it affects every app that works through Apple Mail.</p>
+  <p>Gmail does not have folders. It has labels, and a message can carry several at once. When an app asks Apple Mail to file a Gmail message, Gmail adds the new label but keeps the old one, so the message appears in both places. There is no command Apple Mail can be asked to run that removes a Gmail label. That is a limit of Apple Mail&rsquo;s scripting rather than of Gmail &mdash; Gmail&rsquo;s own web interface removes labels perfectly well, and so does its API, but reaching that API would mean sending your mail off this Mac. It affects every app that works through Apple Mail.</p>
   <p>To end up in one place only, move the messages in Apple Mail itself, which files them properly, or remove the old label in Gmail on the web. Moving to Trash <em>does</em> work normally on Gmail, because trashing removes every label.</p>
 </div>
 
@@ -58,14 +59,34 @@
 </div>
 
 <div class="card">
+  <h3>Is it safe to use the unsubscribe button?</h3>
+  <p>It depends on the sender, and the app tells you which case you are in.</p>
+  <p>Mail Assistant never unsubscribes you. It reads the unsubscribe details the sender put in their own message headers &mdash; not a link buried in the artwork, which is the one security guidance tells you to avoid &mdash; and hands you the route they published. A web address opens in your browser; an email address opens a pre-addressed message in Apple Mail that is not sent until you send it.</p>
+  <p>Either route tells the sender your address is live, because the link they publish identifies you. For a shop or a newsletter you signed up for, that is fine and unsubscribing is the right move. For a sender you have never heard of, it is the wrong tool: it confirms a real person reads the mailbox, and some unsubscribe pages exist to find that out. Mark one of their messages as Junk in Apple Mail instead, and use Move to Trash here for what already arrived.</p>
+  <p>Because the app can see whether you have ever written to an address, it says which of those two you are looking at before you choose.</p>
+</div>
+
+<div class="card">
+  <h3>What is the Trends tab for?</h3>
+  <p>Deciding what to deal with, rather than doing it. It shows how much mail arrived each week and when the busiest week was, senders who first wrote recently and whose mail you have never once opened, addresses you have not heard from in over a year, and what is stacking up unread now. The sender lists can be narrowed to addresses you have never written to, so people you correspond with stay out of the way.</p>
+  <p>Nothing on that tab changes your mail. Each row has a <strong>Show</strong> button that opens the sender in the Senders Report, where you can act on it.</p>
+</div>
+
+<div class="card">
   <h3>Is my mail sent anywhere?</h3>
   <p>No. The app has no network permission at all, so macOS will not let it connect to the internet even if it tried. See the <a href="/mail-assistant/privacy.html">privacy policy</a> for the detail.</p>
 </div>
 
 <h2>Removing the app</h2>
 <div class="card">
-  <p>Drag <strong>Mail Assistant</strong> from your Applications folder to the Trash, then remove its settings folder at <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. That takes the search index and action history with it.</p>
-  <p>If you turned on <strong>Launch at Login</strong>, switch it off in System Settings → General → Login Items first. Your mail is untouched by any of this — the app never stored a copy of it.</p>
+  <p>The same four steps are in the app, under <strong>Settings &rsaquo; Removing Mail Assistant</strong>, with a button that opens the folder for you.</p>
+  <ol>
+    <li>If you switched on <strong>Launch at Login</strong>, choose <strong>Disable Launch at Login</strong> from the app&rsquo;s envelope icon in the menu bar, then quit it from there.</li>
+    <li>Delete the app the way you delete any other &mdash; from Launchpad, or by dragging it from Applications to the Trash.</li>
+    <li>Drag its folder to the Trash: <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. The Finder shows this folder as <strong>Mail Assistant</strong>. That takes the search index and the action history with it.</li>
+    <li>Optional: open System Settings &rsaquo; Privacy &amp; Security &rsaquo; Automation and remove Mail Assistant. macOS keeps that entry after an app is deleted.</li>
+  </ol>
+  <p>Your mail is untouched by any of this. The app never stored a copy of it, and anything you moved or deleted with it stays as it is in Apple Mail.</p>
 </div>
 
 <h2>Still stuck?</h2>
