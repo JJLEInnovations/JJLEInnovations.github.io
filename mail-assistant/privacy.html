@@ -37,10 +37,12 @@
 <ul>
   <li>A <strong>search index</strong>, so searching is fast and does not have to re-read your mail each time.</li>
   <li>A <strong>record of actions you confirmed</strong> &mdash; which messages were moved where &mdash; so the app can show you a history and put messages back.</li>
+  <li><strong>Searches you saved</strong>, so you can run them again.</li>
+  <li><strong>Marks you put on senders</strong> &mdash; kept, ignored, or set aside to look at later.</li>
   <li>Your <strong>settings</strong>, including the folder-access choice above.</li>
 </ul>
-<p>All of it lives in <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. Moving that folder to the Trash deletes the index, the history, and your settings, and withdraws the folder access you granted.</p>
-<p>Two things are not inside it, so that deleting the folder is not mistaken for removing every trace. macOS keeps its own <strong>Automation permission entry</strong> for the app in System Settings &rsaquo; Privacy &amp; Security &rsaquo; Automation, which survives deleting the app; you can remove it there. And any <strong>spreadsheet you exported</strong> stays wherever you chose to save it.</p>
+<p>All of it lives in <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. Moving that folder to the Trash deletes all of it &mdash; the index, the history, your saved searches, your sender marks, and your settings &mdash; and withdraws the folder access you granted.</p>
+<p>Two things live outside that folder, so that deleting it is not mistaken for removing every trace. macOS keeps its own <strong>Automation permission entry</strong> for the app in System Settings &rsaquo; Privacy &amp; Security &rsaquo; Automation, which survives deleting the app; you can remove it there. And any <strong>spreadsheet you exported</strong> stays wherever you chose to save it.</p>
 
 <h2>What the app sends: nothing</h2>
 <p>This is not a promise you are asked to take on trust. Mail Assistant is a sandboxed app that does not request network permission from macOS. It <em>cannot</em> open an internet connection &mdash; the operating system refuses. Specifically:</p>
@@ -64,9 +66,6 @@
 
 <h2>Requests about your data</h2>
 <p>Because nothing is collected, there is nothing held about you to give you a copy of, correct, or delete, and nothing that could be sold, shared, or disclosed to anyone. Everything the app produced is in the folder named above, under your control, on your own Mac.</p>
-
-<h2>Children</h2>
-<p>Mail Assistant collects no personal information from anyone, including children under 13.</p>
 
 <h2>Changes to this policy</h2>
 <p>If this policy changes, the date at the top changes with it. If the app ever gains the ability to send data anywhere &mdash; which would be a significant change to how it works &mdash; that will be stated plainly here and in the app&rsquo;s release notes before it happens.</p>
