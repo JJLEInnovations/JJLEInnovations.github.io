@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Mail Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <span class="brand">JJLE Innovations</span>
+  <a href="index.html">Mail Assistant</a>
+  <a href="privacy.html" aria-current="page">Privacy</a>
+  <a href="support.html">Support</a>
+</nav>
+
+<h1>Mail Assistant Privacy Policy</h1>
+<p class="updated">Last updated 20 September 2026</p>
+
+<div class="summary">
+  <p><strong>Mail Assistant does not collect anything.</strong> It reads your mail on your Mac, keeps what it builds on your Mac, and has no ability to send anything anywhere. There is no account to create, no analytics, and no third-party code in the app.</p>
+</div>
+
+<h2>What the app reads</h2>
+<p>Mail Assistant works with the mail Apple Mail has already downloaded to your Mac. It reads two things from your <code>~/Library/Mail</code> folder:</p>
+<ul>
+  <li><strong>Apple Mail's index</strong> — the database Mail keeps of senders, subjects, dates, folders, sizes, and whether a message is read.</li>
+  <li><strong>Message files</strong> — the individual <code>.emlx</code> files on your disk, read only when you search for words inside messages or ask for an unsubscribe link.</li>
+</ul>
+<p>You grant this access yourself, once, in a standard macOS file panel the first time you use the app. macOS remembers your choice so you are not asked again, and you can revoke it at any time in System Settings.</p>
+
+<h2>What the app stores, and where</h2>
+<p>Everything the app creates stays in its own folder on your Mac:</p>
+<ul>
+  <li>A <strong>search index</strong>, so searching is fast and does not have to re-read your mail each time.</li>
+  <li>A <strong>record of actions you confirmed</strong> — which messages were moved where — so the app can show you a history and put messages back.</li>
+  <li>Your <strong>settings</strong>.</li>
+</ul>
+<p>All of it lives in <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. Moving that folder to the Trash removes every trace of it. Nothing is stored anywhere else, on this Mac or off it.</p>
+
+<h2>What the app sends: nothing</h2>
+<p>This is not a policy commitment we are asking you to take on trust. Mail Assistant is a sandboxed app that does not request network permission from macOS. It <em>cannot</em> open an internet connection — the operating system refuses. Specifically:</p>
+<ul>
+  <li>No data of any kind is transmitted off your Mac.</li>
+  <li>No analytics, usage tracking, crash reporting, or advertising.</li>
+  <li>No third-party software libraries are included in the app.</li>
+  <li>No account, no sign-in, no server.</li>
+</ul>
+
+<h2>Changing your mail</h2>
+<p>When you confirm an action, the app asks Apple Mail to carry it out: move messages to a folder or to Trash, put them back, or mark them read or unread. This uses macOS Automation, which you approve separately the first time. Nothing is ever changed without a confirmation that names how many messages are affected.</p>
+
+<h2>Links you open</h2>
+<p>When you use an unsubscribe link, the app hands the address to your default web browser and stops there. From that point you are on the sender's website, and their privacy policy applies. The app does not open the page itself, does not follow it, and never sees the response.</p>
+
+<h2>Children</h2>
+<p>Mail Assistant collects no personal information from anyone, including children under 13.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the date at the top changes with it. If the app ever gains the ability to send data anywhere — which would be a significant change to how it works — that will be stated plainly here and in the app's release notes before it happens.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy, or about the app: <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a>.</p>
+
+<footer>
+  <p>Mail Assistant is developed by JJLE Innovations.</p>
+  <p>Apple, Apple Mail, macOS and Mac are trademarks of Apple Inc.</p>
+</footer>
+
+</div>
+</body>
+</html>

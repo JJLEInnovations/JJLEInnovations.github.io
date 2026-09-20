@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Mail Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <span class="brand">JJLE Innovations</span>
+  <a href="index.html">Mail Assistant</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="support.html" aria-current="page">Support</a>
+</nav>
+
+<h1>Mail Assistant Support</h1>
+<p class="lead">Email <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a> and you will get a reply from a person. Below are the questions that come up most.</p>
+
+<h2>Getting started</h2>
+
+<div class="card">
+  <h3>The app is asking for access to a folder. Why?</h3>
+  <p>Mail Assistant reads the mail Apple Mail has already downloaded, which lives in your <code>~/Library/Mail</code> folder. macOS requires you to point the app at that folder yourself, in a standard file panel, before it can read anything. You only do this once.</p>
+  <p>It does not need Full Disk Access, and granting this does not give the app access to anything else on your Mac.</p>
+</div>
+
+<div class="card">
+  <h3>It is asking for permission to control Mail.</h3>
+  <p>That prompt appears the first time you confirm an action. Moving a message or marking it read has to be done by Apple Mail itself, and macOS requires your approval before one app can ask another to do something. Searching does not need it — only changes do.</p>
+</div>
+
+<div class="card">
+  <h3>Everything is empty.</h3>
+  <p>The app reads an existing Apple Mail setup. If Mail is not signed in to an account, or has not finished downloading messages, there is nothing for the app to show. Open Mail, make sure your mail is there, then use <strong>Refresh Report</strong>.</p>
+</div>
+
+<h2>Using it</h2>
+
+<div class="card">
+  <h3>I moved Gmail messages and they are still in the Inbox.</h3>
+  <p>This is Gmail, not a bug, and the app warns you before it happens.</p>
+  <p>Gmail does not have folders. It has labels, and a message can carry several at once. When an app asks Apple Mail to file a Gmail message, Gmail adds the new label but keeps the old one, so the message appears in both places. There is no command Apple Mail can send that removes a Gmail label — this is a limit of what Gmail exposes, and it affects every app that works through Apple Mail.</p>
+  <p>To end up in one place only, move the messages in Apple Mail itself, which files them properly, or remove the old label in Gmail on the web. Moving to Trash <em>does</em> work normally on Gmail, because trashing removes every label.</p>
+</div>
+
+<div class="card">
+  <h3>Can I undo something?</h3>
+  <p>Yes. <strong>Restore</strong> puts back messages you moved to Trash, returning each one to the folder it came from. Mark as Read is undone by <strong>Mark as Unread</strong>, which appears on the same button once a sender has nothing unread left.</p>
+  <p>Every action is recorded in <strong>Recent actions</strong>, so you can see exactly what happened and when.</p>
+</div>
+
+<div class="card">
+  <h3>It is slower than doing it in Apple Mail.</h3>
+  <p>For one sender, Apple Mail is faster. Mail Assistant is built for the case Mail handles badly: acting on many senders at once, across several accounts, without searching for each one by hand. A large cleanup takes minutes because Apple Mail processes each message individually — the window stays usable and you can press Stop at any time.</p>
+</div>
+
+<div class="card">
+  <h3>Is my mail sent anywhere?</h3>
+  <p>No. The app has no network permission at all, so macOS will not let it connect to the internet even if it tried. See the <a href="privacy.html">privacy policy</a> for the detail.</p>
+</div>
+
+<h2>Removing the app</h2>
+<div class="card">
+  <p>Drag <strong>Mail Assistant</strong> from your Applications folder to the Trash, then remove its settings folder at <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. That takes the search index and action history with it.</p>
+  <p>If you turned on <strong>Launch at Login</strong>, switch it off in System Settings → General → Login Items first. Your mail is untouched by any of this — the app never stored a copy of it.</p>
+</div>
+
+<h2>Still stuck?</h2>
+<p>Write to <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a>. It helps to include your macOS version, which mail provider the account uses (Gmail, iCloud, Exchange, other), and what you expected to happen.</p>
+
+<footer>
+  <p>Mail Assistant is developed by JJLE Innovations.</p>
+  <p>Apple, Apple Mail, macOS and Mac are trademarks of Apple Inc.</p>
+</footer>
+
+</div>
+</body>
+</html>
