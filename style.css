@@ -87,6 +87,10 @@ a { color: var(--link); }
 .lead { font-size: 19.5px; color: var(--ink-muted); margin-bottom: 8px; max-width: 58ch;
         /* Stops a one-word last line. Ignored where unsupported. */
         text-wrap: pretty; }
+/* Sits under the lead: the positioning line, quieter than the hook above it
+   so the two read as a pair rather than competing for the same weight. */
+.sub-lead { font-size: 17.5px; color: var(--ink-muted); max-width: 62ch;
+            margin-top: 10px; margin-bottom: 4px; text-wrap: pretty; }
 
 .summary { background: var(--affirm-soft); border: 1px solid rgba(110, 231, 192, .45);
            border-left-width: 4px; border-radius: 10px; padding: 16px 18px; margin: 26px 0 8px; }
