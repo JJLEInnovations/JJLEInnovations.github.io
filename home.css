@@ -447,6 +447,17 @@ a {
 }
 
 
+/* The "Apps that make a difference" line, between the title and the
+   tagline: clear of the title's descenders, a little air before the tagline. */
+
+.hero h1 + .section-eyebrow {
+    margin:
+        4px
+        0
+        12px;
+}
+
+
 .hero-tagline {
     margin: 0;
 
