@@ -53,6 +53,41 @@ body.marked::before {
 /* Below this there is no gutter left to put it in. */
 @media (max-width: 1100px) { body.marked::before { display: none; } }
 
+/* The company home page: the JJLE logo's own near-white ground and navy ink,
+   with the app card as the one blue thing on it. Everything is scoped to
+   body.home, so the Mail Assistant pages keep the blue look above. */
+body.home {
+  color-scheme: light;
+  --ink: #071934;          /* sampled from the logo's wordmark */
+  --ink-muted: #3B4A66;
+  --link: #0048C8;
+  --rule: rgba(7, 25, 52, .14);
+  background:
+    radial-gradient(1100px 650px at 80% -10%, rgba(56, 168, 248, .12) 0%, transparent 60%),
+    linear-gradient(175deg, #FFFFFF 0%, #F4F7FC 55%, #EAF0FA 100%);
+  background-attachment: fixed;
+}
+html:has(body.home) { background: #EAF0FA; }
+body.home strong { color: var(--ink); }
+body.home nav .brand img { width: auto; height: 30px; border-radius: 0; }
+body.home nav a:hover { color: var(--ink); }
+/* The logo is not a rounded square, so it can sit a little stronger. */
+body.home.marked::before { background-image: url("/jjle-mark.webp"); opacity: .12; }
+
+/* The app card keeps the app's blue, and the blue-theme colours with it. */
+body.home .card {
+  --ink: #FFFFFF;
+  --ink-muted: #CBDFFA;
+  --link: #A9D6FF;
+  --rule: rgba(255, 255, 255, .18);
+  color: var(--ink);
+  background:
+    radial-gradient(700px 400px at 85% -20%, rgba(56, 168, 248, .30) 0%, transparent 60%),
+    linear-gradient(165deg, var(--ground-top) 0%, #06307F 60%, var(--ground-bottom) 100%);
+  border-color: rgba(4, 32, 78, .6);
+  box-shadow: 0 2px 6px rgba(4, 32, 78, .18), 0 16px 40px rgba(4, 32, 78, .24);
+}
+
 .wrap { position: relative; z-index: 1; max-width: 900px; margin: 0 auto;
         padding-inline: 22px; padding-block: 36px 80px; }
 
