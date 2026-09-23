@@ -557,11 +557,13 @@ a {
         1px solid
         rgba(62, 120, 210, 0.18);
 
+    /* A light tint of the Mail Assistant icon's own blues: its sky-blue
+       highlight (#3DB0FB) top-left, its core blue (#004ACA) bottom-right. */
     background:
         linear-gradient(
             135deg,
-            rgba(255, 255, 255, 0.93),
-            rgba(246, 250, 255, 0.78)
+            rgba(224, 242, 254, 0.94),
+            rgba(219, 230, 248, 0.90)
         );
 
     backdrop-filter:
@@ -741,7 +743,9 @@ a {
 .app-summary {
     margin: 0;
 
-    color: var(--blue);
+    /* A shade under --blue: 17px bold on the blue card needs 4.5:1,
+       and --blue there is 4.1:1. This is 5.1:1. */
+    color: #0b55d6;
 
     font-size: 17px;
 
@@ -961,8 +965,9 @@ a {
 
     color: #28496f;
 
+    /* White, so the pills still stand off the blue card. */
     background:
-        rgba(218, 233, 255, 0.67);
+        rgba(255, 255, 255, 0.62);
 
     border:
         1px solid
