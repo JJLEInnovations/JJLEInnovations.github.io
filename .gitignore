@@ -1,3 +1,7 @@
 # Screenshot originals. The site serves the WebP copies in mail-assistant/shots/,
 # which are a tenth the size; these stay local so they can be re-exported.
 mail-assistant/MailAssistant*.png
+
+# App Store screenshot set, generated from the originals above. Uploaded to
+# App Store Connect, not served by the site.
+appstore/
