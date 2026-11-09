@@ -13,6 +13,7 @@
 
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="stylesheet" href="/style.css?v=20260922c">
+<link rel="stylesheet" href="support.css?v=20261108f">
 </head>
 <body class="marked">
 <div class="wrap">
@@ -23,85 +24,150 @@
   <a href="/mail-assistant/">Mail Assistant</a>
   <a href="/mail-assistant/privacy.html">Privacy</a>
   <a href="/mail-assistant/support.html" aria-current="page">Support</a>
+  <a href="/mail-assistant/terms.html">Terms</a>
 </nav>
-
-<h1>Mail Assistant Support</h1>
-<p class="lead">Email <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a> and you will get a reply from a person. Below are the questions that come up most.</p>
-
-<h2>Getting started</h2>
-
-<div class="card">
-  <h3>The app is asking for access to a folder. Why?</h3>
-  <p>Mail Assistant reads the mail Apple Mail has already downloaded, which lives in your <code>~/Library/Mail</code> folder. macOS requires you to point the app at that folder yourself, in a standard file panel, before it can read anything. You only do this once.</p>
-  <p>It does not need Full Disk Access, and granting this does not give the app access to anything else on your Mac.</p>
-</div>
-
-<div class="card">
-  <h3>It is asking for permission to control Mail.</h3>
-  <p>That prompt appears the first time you confirm an action. Moving a message or marking it read has to be done by Apple Mail itself, and macOS requires your approval before one app can ask another to do something. Searching does not need it — only changes do.</p>
-</div>
-
-<div class="card">
-  <h3>Everything is empty.</h3>
-  <p>Check <strong>Settings &rsaquo; Apple Mail access</strong> first. If it says <em>Not granted</em>, the app cannot read anything until you choose Apple Mail&rsquo;s folder &mdash; that is the usual cause, and it is also what happens if you used <strong>Revoke Access</strong>.</p>
-  <p>If access is granted, the app is reading an Apple Mail setup that has nothing in it yet. If Mail is not signed in to an account, or has not finished downloading messages, there is nothing to show. Open Mail, make sure your mail is there, then use <strong>Refresh Report</strong>.</p>
-</div>
-
-<h2>Using it</h2>
-
-<div class="card">
-  <h3>I moved Gmail messages and they are still in the Inbox.</h3>
-  <p>This is Gmail, not a bug, and the app warns you before it happens.</p>
-  <p>Gmail does not have folders. It has labels, and a message can carry several at once. When an app asks Apple Mail to file a Gmail message, Gmail adds the new label but keeps the old one, so the message appears in both places. There is no command Apple Mail can be asked to run that removes a Gmail label. That is a limit of Apple Mail&rsquo;s scripting rather than of Gmail &mdash; Gmail&rsquo;s own web interface removes labels perfectly well, and so does its API, but reaching that API would mean sending your mail off this Mac. It affects every app that works through Apple Mail.</p>
-  <p>To end up in one place only, move the messages in Apple Mail itself, which files them properly, or remove the old label in Gmail on the web. Moving to Trash <em>does</em> work normally on Gmail, because trashing removes every label.</p>
-</div>
-
-<div class="card">
-  <h3>Can I undo something?</h3>
-  <p>Yes. <strong>Restore</strong> puts back messages you moved to Trash, returning each one to the folder it came from. Mark as Read is undone by <strong>Mark as Unread</strong>, which appears on the same button once a sender has nothing unread left.</p>
-  <p>Every action is recorded in <strong>Recent actions</strong>, so you can see exactly what happened and when.</p>
-</div>
-
-<div class="card">
-  <h3>Why does a large cleanup take a while?</h3>
-  <p>Because Apple Mail makes every change, not this app. Mail Assistant never writes to your mail files. It asks Apple Mail to move or mark each message, one at a time, so your accounts stay in sync and nothing happens to your mail that Apple Mail did not do itself.</p>
-  <p>Where Mail Assistant stands out is the work around that: seeing which senders are worth acting on across all your accounts at once, then handling all of them in a single confirmed pass instead of searching for each one by hand. For one sender already in front of you, Apple Mail is quicker. For two hundred you have not looked at in a year, this is one pass rather than two hundred searches &mdash; and the window stays usable, with a Stop button, for as long as it runs.</p>
-</div>
-
-<div class="card">
-  <h3>Is it safe to use the unsubscribe button?</h3>
-  <p>It depends on the sender, and the app tells you which case you are in.</p>
-  <p>Mail Assistant never unsubscribes you. It reads the unsubscribe details the sender put in their own message headers &mdash; not a link buried in the artwork, which is the one security guidance tells you to avoid &mdash; and hands you the route they published. A web address opens in your browser; an email address opens a pre-addressed message in Apple Mail that is not sent until you send it.</p>
-  <p>Either route tells the sender your address is live, because the link they publish identifies you. For a shop or a newsletter you signed up for, that is fine and unsubscribing is the right move. For a sender you have never heard of, it is the wrong tool: it confirms a real person reads the mailbox, and some unsubscribe pages exist to find that out. Mark one of their messages as Junk in Apple Mail instead, and use Move to Trash here for what already arrived.</p>
-  <p>Because the app can see whether you have ever written to an address, it says which of those two you are looking at before you choose.</p>
-</div>
-
-<div class="card">
-  <h3>What is the Trends tab for?</h3>
-  <p>Deciding what to deal with, rather than doing it. It shows how much mail arrived each week and when the busiest week was, senders who first wrote recently and whose mail you have never once opened, addresses you have not heard from in over a year, and what is stacking up unread now. The sender lists can be narrowed to addresses you have never written to, so people you correspond with stay out of the way.</p>
-  <p>Nothing on that tab changes your mail. Each row has a <strong>Show</strong> button that opens the sender in the Senders Report, where you can act on it.</p>
-</div>
-
-<div class="card">
-  <h3>Is my mail sent anywhere?</h3>
-  <p>No. The app has no network permission at all, so macOS will not let it connect to the internet even if it tried. See the <a href="/mail-assistant/privacy.html">privacy policy</a> for the detail.</p>
-</div>
-
-<h2>Removing the app</h2>
-<div class="card">
-  <p>The same four steps are in the app, under <strong>Settings &rsaquo; Removing Mail Assistant</strong>, with a button that opens the folder for you.</p>
-  <ol>
-    <li>If you switched on <strong>Launch at Login</strong>, choose <strong>Disable Launch at Login</strong> from the app&rsquo;s envelope icon in the menu bar, then quit it from there.</li>
-    <li>Delete the app the way you delete any other &mdash; from Launchpad, or by dragging it from Applications to the Trash.</li>
-    <li>Drag its folder to the Trash: <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. The Finder shows this folder as <strong>Mail Assistant</strong>. That takes the search index and the action history with it.</li>
-    <li>Optional: open System Settings &rsaquo; Privacy &amp; Security &rsaquo; Automation and remove Mail Assistant. macOS keeps that entry after an app is deleted.</li>
-  </ol>
-  <p>Your mail is untouched by any of this. The app never stored a copy of it, and anything you moved or deleted with it stays as it is in Apple Mail.</p>
-</div>
-
-<h2>Still stuck?</h2>
-<p>Write to <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a>. It helps to include your macOS version, which mail provider the account uses (Gmail, iCloud, Exchange, other), and what you expected to happen.</p>
-
+<main>
+  <h1>Mail Assistant Support</h1>
+  <p id="iv1co4">
+    We're here to help you get the most out of Mail Assistant. Whether you're setting things up for the first time, have a question about a feature, or need help troubleshooting an issue, you'll find answers to some of the most common questions below.
+  </p>
+  <p class="lead" id="ica38">
+    <span id="words-1">Still need assistance? Reach out to us at <a id="i4hxak" draggable="true" href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a>. We'll be more than happy to assist</span>
+  </p>
+  <h2 id="itt13">Getting started</h2>
+  <div class="card" id="ia0xh">
+    <h3 id="i70zm">Why is Mail Assistant asking me to select a folder?</h3>
+    <p id="isbki">
+      Mail Assistant needs permission to access the email data Apple Mail stores on your Mac. The first time you use the application, macOS will ask you to select Apple Mail's data folder through a standard file selection window. If you try to select any other folder that's not the ~/Library/Mail the app will reject it and prompt you to please select the right folder and guide you to it.<br/>This is a one-time setup step. Once you've granted access, macOS remembers your selection, and you won't need to repeat the process unless access is revoked.<br/>You do not need to enable Full Disk Access to use Mail Assistant.<br/>
+    </p>
+  </div>
+  <div class="card" id="ijkas">
+    <h3 id="ig4a2">Why is macOS asking for permission to control Apple Mail?</h3>
+    <p id="ie3h4">
+      macOS requires your approval before one application can request that another application perform certain actions.<br/>Mail Assistant needs this permission when you want to make changes to your messages, such as moving them between folders, sending them to Trash, or changing their read status.<br/>You'll see this request the first time you perform an action that requires Apple Mail's assistance. Searching and viewing reports do not require this permission.<br/>
+    </p>
+  </div>
+  <div class="card" id="i83rb">
+    <h3 id="i3p01">Why isn't anything showing up in Mail Assistant?</h3>
+    <p id="imasj">If your reports and search results are empty, start by checking your Apple Mail access settings.</p>
+    <ol id="iegrl6">
+      <li>
+        Open Mail Assistant and click the tab called <strong id="iwkvu1">Settings › Apple Mail Access</strong> in Mail Assistant.
+      </li>
+      <li>Check whether access is showing as <em>Granted</em>.</li>
+      <li>
+        If access hasn't been granted, click the Choose Mail's Folder Again. This will bring a prompt with the location of the folder for you to select. Select the folder name Mail and hit Grant Access.
+      </li>
+      <li>
+        Open Apple Mail and make sure your accounts are configured/signed in and your messages have finished downloading. Note that Apple Mail needs to have at least one account signed and have messages already downloaded to Mail folder in order for Mail Assistant to work as intended.
+      </li>
+      <li>Return to Mail Assistant and select <strong>Refresh Report</strong>.</li>
+    </ol>
+    <p id="i0gsi">
+      If you've recently used <strong>Revoke Access</strong>, you'll need to grant access again before Mail Assistant can display your email information.
+    </p>
+  </div>
+  <h2 id="i7nl1">Using Mail Assistant</h2>
+  <div class="card">
+    <h3 id="izwm4">Why do Gmail messages sometimes appear in both the old and new folders after moving them?</h3>
+    <p id="ifi2t">This is related to how Gmail organizes email.</p>
+    <p id="i66oo">
+      Unlike traditional email folders, Gmail uses labels. A message can have multiple labels at the same time, which means it can appear in more than one location.<br/>When Mail Assistant asks Apple Mail to move a Gmail message, Gmail may apply the destination label without removing the original one. As a result, the message can continue appearing in its previous location.<br/>This is a limitation of how Apple Mail handles Gmail label operations through its supported automation features.<br/>
+    </p>
+  </div>
+  <div class="card" id="i9mjz">
+    <h3 id="iy0ne">How can I move a Gmail message to just one location?</h3>
+    <p id="id7i7">
+      To remove the original label completely, use Apple Mail directly or manage the labels through Gmail's website.<br/>Moving messages to Trash works differently. Gmail removes the message from its existing locations when it is sent to Trash.<br/>Mail Assistant displays a warning about this behavior before you perform affected operations so you know what to expect.
+    </p>
+    <h3 id="ivejpq">
+      Can I undo an action?<br/><span id="iws4zf">Yes! Mail Assistant includes a Restore feature for supported operations.</span><br/>Messages moved to Trash<span id="i4gnb5">: Restore returns eligible messages to their original folders. </span><br/>Messages marked as Read: <span id="ikxbg5">You can mark them as Unread again.<br/><br/>You can also review your previous operations under Recent Actions, where you'll find a record of what was performed and when.<br/><br/>Please keep in mind that messages permanently deleted by an email provider's retention policy or manually removed from Trash cannot be restored through Mail Assistant.</span><br/>
+    </h3>
+  </div>
+  <div class="card" id="iitin">
+    <h3 id="is1hg">Why do some operations take longer than others?</h3>
+    <p id="i92r8q">
+      When processing large numbers of messages, Mail Assistant works through the requested changes individually by asking Apple Mail to perform each operation in batches.<br/>This means the time required depends on several factors, including the number of messages selected, your email provider, and how quickly Apple Mail processes each request. For larger operations, Mail Assistant keeps the interface available while processing and provides a <strong>Stop</strong> option if you decide to interrupt the operation. Any changes completed before you stop will remain in effect. Messages that haven't yet been processed will not be included in those completed changes. The advantage is that you can identify messages across multiple accounts and senders, then manage them together rather than repeating the same process manually for each sender.<br/>
+    </p>
+  </div>
+  <div class="card" id="idb489">
+    <h3 id="ielirk">Is it safe to use the Unsubscribe feature?</h3>
+    <p id="il1pug">
+      Mail Assistant is designed to help you make a more informed decision before following an unsubscribe request.
+    </p>
+    <p id="i8v25f">
+      It identifies unsubscribe information supplied by the sender in the email's message headers, rather than relying on potentially misleading links embedded in message content.
+    </p>
+    <p id="i7du58">Depending on what the sender provides, you may be presented with one of two options:</p>
+    <ul id="izqahl">
+      <li><strong>Website unsubscribe:</strong> Opens the sender's published unsubscribe address in your default browser.</li>
+      <li>
+        <strong>Email unsubscribe:</strong> Opens a pre-addressed message in your email application. You review and send it yourself.
+      </li>
+    </ul>
+    <p id="ijc4d7">
+      <strong>A word of caution about unfamiliar senders:</strong><br/>Following an unsubscribe link can confirm that your email address is active. This is generally expected when dealing with legitimate newsletters or companies you've previously interacted with. However, if you receive an unexpected message from an unfamiliar sender, following its unsubscribe link may not be the safest option. For that reason, Mail Assistant considers your previous correspondence with the sender and provides additional context before you proceed. For unfamiliar or suspicious senders, we recommend using Apple Mail's <strong>Mark as Junk</strong> feature instead.
+    </p>
+  </div>
+  <div class="card">
+    <h3 id="iyga2a">What is the Trends tab used for?</h3>
+    <p id="iqbrj9">
+      The Trends tab helps you identify patterns and activity in your inbox so you can decide what deserves your attention.<br/>It highlights several areas:
+    </p>
+    <ul id="ipjqbb">
+      <li><strong>Weekly Activity:</strong> See how many messages arrived each week and identify your busiest periods.</li>
+      <li><strong>Unopened Senders:</strong> Discover senders whose messages you've never opened.</li>
+      <li><strong>Dormant Senders:</strong> Find addresses you haven't received messages from in over a year.</li>
+      <li><strong>Unread Mail:</strong> Identify where unread messages are accumulating.</li>
+    </ul>
+    <p id="iidx0l">
+      You can filter and sort the lists to narrow down the results, including focusing on senders you've never corresponded with.<br/>Trends is an informational feature. It does not automatically move, delete, or modify your messages.<br/>When you find a sender you'd like to investigate, use the <strong>Show</strong> button to open that sender in Sender Reports, where you can explore their messages and available management options. Clicking search on a sender in Senders Report will take you to Advance Mail Search and show that sender's emails.<br/>
+    </p>
+  </div>
+  <div class="card" id="it0zpz">
+    <h3 id="ix6ru5">Does Mail Assistant connect to the internet or send my emails anywhere?</h3>
+    <p id="i17tcj">
+      No. Mail Assistant is designed to operate locally on your Mac and does not transmit your email data to external servers. It does not require an account, sign-in, or cloud service.<br/>No. For a complete explanation of what information the application accesses, what it stores, and how permissions work, please see our <a href="privacy.html">privacy policy</a> for the detail.
+    </p>
+  </div>
+  <h2 id="it8eyk">Uninstalling Mail Assistant</h2>
+  <div class="card">
+    <p id="ij1gx8">
+      If you decide to remove Mail Assistant, we've made the process straightforward. You can also find these instructions in the application under <strong>Setup Guide › Removing Mail Assistant</strong>, where it describes how to uninstall.<br/>Follow these steps:<br/>
+    </p>
+    <ol id="i255ye">
+      <li>
+        <strong>Disable Launch at Login (if enabled).</strong> Select <strong>Disable Launch at Login</strong> from the Mail Assistant envelope icon in your menu bar, then quit the application.
+      </li>
+      <li>
+        <strong>Remove the application.</strong> Quit Mail Assistant and move it from your Applications folder to the Trash, just as you would with any other Mac application.
+      </li>
+      <li>
+        <strong>Remove its application data.</strong> Open the folder using the shortcut in Settings, or navigate to:<br/><code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code><br/>Move the <strong>Mail Assistant</strong> folder to the Trash. This removes locally stored application information, including saved searches, reports' search indexes, action history, sender preferences, and settings.
+      </li>
+      <li>
+        <strong>Optional: Remove Automation permission.</strong> Open <strong>System Settings › Privacy &amp; Security › Automation</strong> and remove Mail Assistant from the list if its permission entry is still present.
+      </li>
+    </ol>
+    <p id="iyar9x">
+      <strong>What happens to my email?</strong><br/>Uninstalling Mail Assistant does not delete your email accounts, messages, or folders from Apple Mail. Your existing mail remains managed by Apple Mail, and any changes you previously made will remain in effect.
+    </p>
+  </div>
+  <h2 id="iccreq">Still Need Help?</h2>
+  <p id="i4c1lg">
+    The easiest way to contact us is through <strong>Contact Developer</strong> in the Mail Assistant Help menu. This opens a pre-filled email containing useful diagnostic information, including your macOS version, Apple Mail version, permission status, and recent application errors. You can review the message, add details about the issue, and remove anything you don't wish to include before sending.
+  </p>
+  <p id="ibssm5">
+    You can also contact us directly:<br/><strong>Email:</strong> <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a><br/>To help us investigate your issue as quickly as possible, please include:
+  </p>
+  <ul id="ich2bj">
+    <li>Your macOS version.</li>
+    <li>Your Apple Mail version.</li>
+    <li>Your email provider (Gmail, iCloud, Exchange, or other).</li>
+    <li>A brief description of what you were trying to do and what happened instead.</li>
+  </ul>
+  <p id="ibmc8p">We appreciate your feedback and are always looking for ways to make Mail Assistant better.<br/></p>
+</main>
 <footer>
   <p>Mail Assistant is developed by JJLE Innovations.</p>
   <p>Apple, Apple Mail, macOS and Mac are trademarks of Apple Inc.</p>

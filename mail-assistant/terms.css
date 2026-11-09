@@ -1,0 +1,38 @@
+#iit6g {
+  font-size: 39px;
+}
+
+.hle-divider {
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-style: initial;
+  border-bottom-style: initial;
+  border-left-style: initial;
+  border-right-color: initial;
+  border-bottom-color: initial;
+  border-left-color: initial;
+  border-image-source: initial;
+  border-image-slice: initial;
+  border-image-width: initial;
+  border-image-outset: initial;
+  border-image-repeat: initial;
+  margin-top: 32px;
+  margin-right: 0px;
+  margin-bottom: 32px;
+  margin-left: 0px;
+}
+
+#ipmfzg {
+  color: var(--bright);
+  text-align: left;
+}
+
+#ij6su2 {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 13px;
+  letter-spacing: -0.018em;
+  text-align: right;
+  text-wrap-mode: initial;
+}

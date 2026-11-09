@@ -1,6 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
+  
+  
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Mail Assistant</title>
@@ -13,6 +14,7 @@
 
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="stylesheet" href="/style.css?v=20260922c">
+<link rel="stylesheet" href="privacy.css?v=20261108f">
 </head>
 <body class="marked">
 <div class="wrap">
@@ -23,76 +25,224 @@
   <a href="/mail-assistant/">Mail Assistant</a>
   <a href="/mail-assistant/privacy.html" aria-current="page">Privacy</a>
   <a href="/mail-assistant/support.html">Support</a>
+  <a href="/mail-assistant/terms.html">Terms</a>
 </nav>
-
-<h1>Mail Assistant Privacy Policy</h1>
-<p class="updated">Last updated 10 October 2026</p>
-
-<div class="summary">
-  <p><strong>Mail Assistant does not collect anything.</strong> It reads your mail on your Mac, keeps what it finds on your Mac, and has no ability to send anything anywhere on its own; it uses Apple Mail. There is no account to create, no sign in, and no third-party code in the app.</p>
-</div>
-
-<h2>What the app reads</h2>
-<p>Mail Assistant works with the mail Apple Mail has already downloaded to your Mac. It reads two things from your <code>~/Library/Mail</code> folder:</p>
-<ul>
-  <li><strong>Apple Mail&rsquo;s index</strong> &mdash; the database Mail already keeps, listing senders, subjects, dates, folders, sizes, and whether each message has been read.</li>
-  <li><strong>Message files</strong> &mdash; the individual <code>.emlx</code> files on your disk. These are read when you build the search index, which opens every message once; when you search for words inside messages; and when you ask what unsubscribe options a sender offers.</li>
-</ul>
-<p>You grant this access yourself, once, in a standard macOS file panel the first time you use the app. macOS remembers your choice, so you are not asked again. That choice is recorded inside the app&rsquo;s own folder rather than in System Settings, so you withdraw it in the app: <strong>Settings &rsaquo; Apple Mail access &rsaquo; Revoke Access</strong>. Deleting the app&rsquo;s folder, described below, withdraws it too.</p>
-
-<h2>What the app stores, and where</h2>
-<p>Everything the app creates stays in its own folder on your Mac:</p>
-<ul>
-  <li>A <strong>search index</strong>, so searching is fast and does not have to re-read your mail each time.</li>
-  <li>A <strong>record of actions you confirmed</strong> &mdash; which messages were moved where &mdash; so the app can show you a history and put messages back.</li>
-  <li><strong>Searches you saved</strong>, so you can run them again.</li>
-  <li><strong>Marks you put on senders</strong> &mdash; kept, ignored, or set aside to look at later.</li>
-  <li>Your <strong>settings</strong>, including the folder-access choice above.</li>
-</ul>
-<p>All of it lives in <code>~/Library/Containers/com.jjleinnovations.MailAssistant/</code>. Moving that folder to the Trash deletes all of it &mdash; the index, the history, your saved searches, your sender marks, and your settings &mdash; and withdraws the folder access you granted.</p>
-<p>Two things live outside that folder, so that deleting it is not mistaken for removing every trace. macOS keeps its own <strong>Automation permission entry</strong> for the app in System Settings &rsaquo; Privacy &amp; Security &rsaquo; Automation, which survives deleting the app; you can remove it there. And any <strong>spreadsheet you exported</strong> stays wherever you chose to save it.</p>
-
-<h2>What the app sends: nothing</h2>
-<p>This is not a promise you are asked to take on trust. Mail Assistant is a sandboxed app that does not request network permission from macOS. It <em>cannot</em> open an internet connection &mdash; the operating system refuses. Specifically:</p>
-<ul>
-  <li>The app transmits no data of any kind off your Mac.</li>
-  <li>No data collection of your mail accounts , no usage tracking, no automatic crash reporting, or advertising.</li>
-  <li>No third-party software libraries are included in the app.</li>
-  <li>No account, no sign-in, no server.</li>
-</ul>
-
-<h2>Changing your mail</h2>
-<p>When you confirm an action, the app asks Apple Mail to carry it out: move messages to a folder or to Trash, restore them from trash, or mark them read or unread. This uses macOS Automation, which you approve separately the first time. Nothing is ever changed without a confirmation that names how many messages are affected.</p>
-
-<h2>Unsubscribing, and links you open</h2>
-<p>Mail Assistant never unsubscribes you. It reads the unsubscribe details a sender put in their own message and offers you the route they published:</p>
-<ul>
-  <li>A <strong>web address</strong> is handed to your default browser, and the app stops there. From that point you are on the sender&rsquo;s website and their privacy policy applies. The app does not open the page itself, does not follow it, and never sees the response.</li>
-  <li>An <strong>email address</strong> opens a pre-addressed message in Apple Mail. Nothing is sent until you send it, and it is Apple Mail that sends it, not this app.</li>
-</ul>
-<p>Either route tells the sender your address is live, because the link they publish identifies you. The app says so before you choose, and tells you when a sender is one you have never written to.</p>
-
-<h2>Requests about your data</h2>
-<p>Because nothing is collected, there is nothing held about you to give you a copy of, correct, or delete, and nothing that could be sold, shared, or disclosed to anyone. Everything the app produced is in the folder named above, under your control, on your own Mac.</p>
-
-<h2>Changes to this policy</h2>
-<p>If this policy changes, the date at the top changes with it. If the app ever gains the ability to send data anywhere &mdash; which would be a significant change to how it works &mdash; that will be stated plainly here and in the app&rsquo;s release notes before it happens.</p>
-
-  <h2>Contacting support</h2>
-  <p>If you use Contact Developer, the app opens an email in your own mail app. It includes a short list of errors the app ran into and a few
-  facts about your setup: your macOS and Mail versions, whether the app has its two permissions, and what kinds of accounts you have (such as
-  Gmail or Exchange, never their names or addresses). It never includes the text, subjects or recipients of your mail, and email addresses are
-  removed. It also includes any crash reports you choose to attach. Nothing is sent unless you send it yourself, and you can remove anything
-  from the email first.</p>
-
-<h2>Contact</h2>
-<p>Questions about this policy, or about the app: <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a>.</p>
-
+<main>
+  <h1>Mail Assistant Privacy Policy</h1>
+  <p class="updated">Last updated 7 November 2026</p>
+  <div class="summary">
+    <p id="iwkeu">
+      <strong>Your privacy matters and we take that seriously. </strong>Mail Assistant was designed with privacy at its core. It works locally on your Mac alongside Apple Mail and does not transmit, upload, or share your email data with external servers or third parties. There are no accounts to create, no sign-ins, no cloud storage, and no email backups. Mail Assistant does not require an internet connection to perform its email management functions. You remain in control of your email and the information Mail Assistant accesses and creates on your Mac.
+    </p>
+  </div>
+  <h2 id="ihxll">What information does Mail Assistant access?</h2>
+  <p id="iiydy">
+    Mail Assistant works with email that Apple Mail has already downloaded and stored on your Mac. To provide its search, reporting, and management features, the application accesses information in your local Apple Mail data folder (<code dir="ltr">~/Library/Mail</code>).
+  </p>
+  <p id="i98ww">This includes two types of information:</p>
+  <ul>
+    <li>
+      <p>
+        <strong>Apple Mail's message index:</strong> The database maintained by Apple Mail that contains information such as sender names and addresses, subjects, dates, folders, message sizes, and read status.
+      </p>
+    </li>
+    <li>
+      <p>
+        <strong>Individual message files:</strong> Locally stored <code dir="ltr">.emlx</code> files containing the actual email messages. These files are accessed when building the search index, searching message contents, or identifying available unsubscribe information. This is an optional feature and can be stopped at any time in settings.
+      </p>
+    </li>
+  </ul>
+  <p>
+    Access is granted by you through a standard macOS file selection window the first time you use the application. macOS remembers your authorization, so you do not need to grant access each time.
+  </p>
+  <p>
+    You can revoke this access through <strong>Settings › Apple Mail Access › Revoke Access</strong>. The authorization information is maintained within Mail Assistant's application data folder. Removing that folder also removes the stored authorization information.
+  </p>
+  <h2 id="i44ov">What information does Mail Assistant store?</h2>
+  <p id="ii8ei">
+    Mail Assistant creates and maintains certain local data to support its features. This information is stored on your Mac in the application's own data folder:
+  </p>
+  <p>~/Library/Containers/com.jjleinnovations.MailAssistant/</p>
+  <p>The information may include:</p>
+  <ul id="im2zd">
+    <li>
+      <p>
+        <strong>Search index:</strong> A locally maintained index that makes searching your email faster without repeatedly processing every message.
+      </p>
+    </li>
+    <li>
+      <p id="igtzv">
+        <strong>Action history:</strong> Records of actions you confirm, including message movements, so you can review previous activity and restore eligible messages.
+      </p>
+    </li>
+    <li>
+      <p><strong>Saved searches:</strong> Search criteria you've chosen to save for future use.</p>
+    </li>
+    <li>
+      <p>
+        <strong>Sender preferences:</strong> Labels or designations you've assigned to senders, such as Keep, Ignore, or Review Later.
+      </p>
+    </li>
+    <li>
+      <p><strong>Application settings:</strong> Your preferences and stored application access information.</p>
+    </li>
+    <li>
+      <p id="i46mo">
+        <strong>Terms of Use records:</strong> The version of the Terms of Use you accepted and the date of acceptance.<span id="imgpeg"><br/></span>
+      </p>
+    </li>
+  </ul>
+  <p id="ivnpug">This information is maintained locally and is not uploaded or synchronized to an external service.</p>
+  <h3 id="iy01ge"><span id="words-1">Removing your locally stored information</span></h3>
+  <ul id="i1oxpl">
+    <li>You can remove Mail Assistant's locally stored information by moving its application data folder to the Trash.</li>
+  </ul>
+  <ul id="igyz6k">
+    <li>
+      Emptying the Trash permanently deletes the contents of that folder, including the search index, action history, saved searches, sender preferences, settings, and Terms of Use acceptance record.
+    </li>
+  </ul>
+  <ul id="ix72t9">
+    <li>
+      Please note that deleting the Mail Assistant application does not automatically remove its separate application data folder.
+    </li>
+  </ul>
+  <p id="iaubge">There are also two items that may exist outside this folder:</p>
+  <p id="i8nk34">
+    <strong id="ipql2a">macOS Automation permission:</strong> macOS maintains its own permission record for allowing Mail Assistant to interact with Apple Mail. You can review or revoke this permission under <strong id="iyvuta">System Settings › Privacy &amp; Security › Automation</strong>. This permission record may remain after the application is deleted.
+  </p>
+  <p id="iba5cf">
+    <strong>Exported spreadsheets:</strong> Any spreadsheets you export are saved to the location you select. These files are separate from Mail Assistant's application data and must be deleted independently if you no longer want them.
+  </p>
+  <h2 id="i11g8m">Does Mail Assistant transmit or share my data?</h2>
+  <p id="issouu">
+    No. Mail Assistant does not transmit your email data or other application information to external servers.
+  </p>
+  <p id="i46oxr">
+    The application is sandboxed and does not request network access. Its functionality is designed to operate locally, using information already available on your Mac and communicating with Apple Mail through macOS.<br/>Specifically:
+  </p>
+  <ul data-spread="false">
+    <li>
+      <p>Your emails and attachments are not uploaded or transmitted by Mail Assistant.</p>
+    </li>
+    <li>
+      <p>Your email account credentials are not collected by Mail Assistant.</p>
+    </li>
+    <li>
+      <p>No email content is sent to third-party services.</p>
+    </li>
+    <li>
+      <p>No advertising or usage-tracking services are included.</p>
+    </li>
+    <li>
+      <p>No automatic crash-reporting service is built into the application.</p>
+    </li>
+    <li>
+      <p>No third-party software libraries are included in the application.</p>
+    </li>
+    <li>
+      <p>No remote accounts, cloud databases, or external servers are used.</p>
+    </li>
+  </ul>
+  <h3>Apple's diagnostic and analytics sharing</h3>
+  <p>
+    macOS has a separate optional feature called <strong>Share with app developers</strong>, located under <strong>System Settings › Privacy &amp; Security › Analytics &amp; Improvements</strong>.
+  </p>
+  <p>
+    If you have enabled this setting, Apple may independently share diagnostic information, crash reports, or usage statistics relating to applications on your Mac with their developers.
+  </p>
+  <p id="ikz3fc">
+    This sharing is managed by macOS under Apple's own privacy practices. Mail Assistant does not initiate or control this process. You can review or disable the setting at any time through System Settings.
+  </p>
+  <h2 id="id0hxz">How does Mail Assistant interact with Apple Mail?</h2>
+  <p id="inncz4">
+    Mail Assistant works alongside Apple Mail rather than replacing it or independently managing your email accounts.
+  </p>
+  <p>
+    When you choose to perform an action, such as moving messages, moving them to Trash, restoring eligible messages, or changing their read status, Mail Assistant requests that Apple Mail perform the operation.
+  </p>
+  <p>
+    These interactions require your approval through macOS Automation permissions. You must authorize this access separately.
+  </p>
+  <p>
+    Mail Assistant does not make changes to your messages without your confirmation. Before an operation begins, you are shown how many messages will be affected.
+  </p>
+  <p>
+    Your email accounts continue to be managed by Apple Mail, and Mail Assistant does not independently send or compose emails on your behalf. The only instance it does open up a new email window with a pre-made template is when you click on Contact Developer in settings and you get choose what to send to us for review of bugs or whatever the reason you chose to contact us.
+  </p>
+  <h2 id="i3edxd">Unsubscribe information and external links</h2>
+  <p id="ipy5gw">
+    Mail Assistant can identify unsubscribe information provided by senders in their own email message headers. It does not automatically unsubscribe you or make decisions on your behalf.
+  </p>
+  <p id="i399uw">When unsubscribe information is available, you can choose how to proceed:</p>
+  <ul>
+    <li id="icgb83">
+      <p>
+        <strong>Web unsubscribe links:</strong> If a sender provides a web address, Mail Assistant passes that address to your default browser. The browser then opens the sender's website. Mail Assistant does not open or interact with the webpage itself, follow the unsubscribe process, or receive the website's response. Once you visit the website, its own privacy policy and practices apply.
+      </p>
+    </li>
+    <li id="iyipx3">
+      <p>
+        <strong>Email unsubscribe addresses:</strong> If a sender provides an email address for unsubscribing, Mail Assistant opens a pre-addressed email in your default email application, typically Apple Mail. Nothing is sent until you review and send the message yourself.
+      </p>
+    </li>
+  </ul>
+  <h3 id="idvati"><span id="words-2">A note about unfamiliar senders</span></h3>
+  <p id="iugujl">
+    Unsubscribe links and addresses can identify your email address to the sender, potentially confirming that your address is active.
+  </p>
+  <p id="i1tlbk">
+    For this reason, Mail Assistant provides additional context before you proceed, including whether you have previously corresponded with a sender or whether the sender is unfamiliar.
+  </p>
+  <p>We encourage you to use caution when interacting with unsubscribe links from senders you do not recognize.</p>
+  <h2 id="inb0jf">Your data and privacy rights</h2>
+  <p id="imx264">
+    Mail Assistant does not collect or maintain your personal email data on external servers. The information it creates is stored locally on your Mac, where it remains under your control. Because Mail Assistant does not operate a remote database of your email information, there is no centrally stored email profile for us to access, provide, correct, or delete. You can manage or remove the locally stored application information yourself using the instructions described above.
+  </p>
+  <h2 id="idk86h">Changes to this Privacy Policy</h2>
+  <p>
+    We may update this Privacy Policy as Mail Assistant updates. Whenever a change is made, the updated date will appear at the top of this document.
+  </p>
+  <p id="iqlm1v">
+    We are committed to maintaining the privacy principles described here. If a future version of Mail Assistant introduces any functionality that can transmit information externally, we will clearly disclose that change in an updated Privacy Policy and the application's release notes before introducing it.
+  </p>
+  <h2 id="iulaht">Contacting support</h2>
+  <p id="iq0cm6">
+    If you choose <strong>Contact Developer</strong> within Mail Assistant, the application opens a pre-addressed email in your own email application. To help us troubleshoot issues, the message may include limited diagnostic information, such as:
+  </p>
+  <ul data-spread="false" id="i5qf8n">
+    <li>
+      <p>The macOS version and Apple Mail version you are using.</p>
+    </li>
+    <li>
+      <p>Whether the required application permissions have been granted.</p>
+    </li>
+    <li>
+      <p>
+        General email account types configured in Apple Mail, such as Gmail or Exchange, without account names or email addresses.
+      </p>
+    </li>
+    <li>
+      <p>A summary of errors encountered by Mail Assistant.</p>
+    </li>
+    <li>
+      <p>Any crash reports you specifically choose to attach.</p>
+    </li>
+  </ul>
+  <p>
+    The support email does not automatically include email message contents, subjects, recipients, or your personal email correspondence. Email addresses are removed from the diagnostic information. <strong>Nothing is transmitted automatically.</strong> The email remains a draft in your email application. You can review its contents, remove information, or choose not to send it at all. If you decide to send the message, it is sent through your email application, not directly by Mail Assistant.
+  </p>
+  <h2 id="il69ip">Contact</h2>
+  <p>
+    Questions about this policy, or about the app: <a href="mailto:jjleinnovations@gmail.com">jjleinnovations@gmail.com</a>.
+  </p>
+</main>
 <footer>
   <p>Mail Assistant is developed by JJLE Innovations.</p>
   <p>Apple, Apple Mail, macOS and Mac are trademarks of Apple Inc.</p>
 </footer>
 
 </div>
-</body>
-</html>
+
+
+</body></html>
